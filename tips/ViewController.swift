@@ -33,6 +33,12 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didPressClear() {
+        tipLabel.text = "$0.00"
+        totalLabel.text = "$0.00"
+        billField.text = ""
+    }
+    
     @IBAction func onEditingChanged(sender: AnyObject) {
         var tipPercentages = [0.18, 0.2, 0.22]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
